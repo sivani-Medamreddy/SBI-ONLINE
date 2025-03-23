@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚨 Report Fraud - BankSecure</title>
+    <link rel="stylesheet" href="reportfraud.css">
+    <script>
+        let step = 1;
+    
+        function nextStep() {
+            document.getElementById(`step${step}`).style.display = "none";
+            step++;
+            if (step <= 3) {
+                document.getElementById(`step${step}`).style.display = "block";
+            }
+        }
+    
+        function sendOTP() {
+            let phone = document.getElementById("phone").value;
+            if (phone.length !== 10) {
+                alert("⚠ Enter a valid 10-digit phone number.");
+                return;
+            }
+            alert("📩 OTP sent to your registered mobile number!");
+        }
+    
+        function submitReport(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Show the success modal
+    const modal = document.getElementById('successModal');
+    modal.style.display = 'block'; // Make the modal visible
+
+    // Redirect after 3 seconds (adjust timing as needed)
+    setTimeout(function() {
+        window.location.href = 'index1.html'; // Redirect to the homepage
+    }, 3000); // 3 seconds delay for the modal display
+}
+
+function closeModal() {
+    // Close the modal
+    const modal = document.getElementById('successModal');
+    modal.style.display = 'none';
+}
+
+
+
+    </script>
+    
+</head>
+<body>
+
+    <header>
+        <h1 style="background: darkred; padding: 15px; color: white; text-align: center;">⚠ Report Fraud - BankSecure</h1>
+    </header>
+
+    <section class="report-container">
+        <form id="fraud-form" onsubmit="submitReport(event)">
+            
+            <!-- Step 1: Personal Details -->
+            <div id="step1">
+                <h2>🔴 Step 1: Your Personal Details</h2>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                <label for="phone">Registered Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter 10-digit phone number">
+                <button type="button" onclick="sendOTP()">📲 Send OTP</button>
+                <input type="text" id="otp" name="otp" required placeholder="Enter OTP received">
+
+                <button type="button" onclick="nextStep()">➡ Next</button>
+            </div>
+
+            <!-- Step 2: Fraud Details -->
+            <div id="step2" style="display: none;">
+                <h2>🚨 Step 2: Fraud Incident Details</h2>
+                <label for="fraud-type">Type of Fraud:</label>
+                <select id="fraud-type" name="fraud-type" required>
+                    <option value="">--Select Fraud Type--</option>
+                    <option value="unauthorized">Unauthorized Transaction</option>
+                    <option value="phishing">Phishing/Scam Call</option>
+                    <option value="card-fraud">Card Fraud</option>
+                    <option value="account-hack">Account Hacked</option>
+                    <option value="others">Others</option>
+                </select>
+
+                <label for="description">Describe the Incident:</label>
+                <textarea id="description" name="description" required placeholder="Provide details about the fraud"></textarea>
+
+                <button type="button" onclick="nextStep()">➡ Next</button>
+            </div>
+
+            <!-- Step 3: Evidence Upload -->
+            <div id="step3" style="display: none;">
+                <h2>📁 Step 3: Upload Supporting Evidence</h2>
+                <label for="evidence">Upload Proof (Screenshot, PDF, etc.):</label>
+                <input type="file" id="evidence" name="evidence" accept=".jpg,.jpeg,.png,.pdf">
+                
+                <button type="submit">🚀 Submit Report</button>
+            </div>
+            <!-- Success Modal -->
+<div id="successModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p style="color:black">Your complaint has been registered successfully!</p>
+        <button onclick="closeModal()">close</button>
+    </div>
+</div>
+
+
+
+
+        </form>
+    </section>
+
+    <footer>
+        <p style="color: white; text-align: center; background: black; padding: 10px;">&copy; 2025 BankSecure. Stay Alert, Stay Safe.</p>
+    </footer>
+
+</body>
+</html>

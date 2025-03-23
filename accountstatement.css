@@ -1,0 +1,182 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004080;
+    padding: 15px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .brand {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #003366;
+}
+
+/* Account Statements Section */
+.account-statements {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account-statements .statement-info {
+    text-align: center;
+}
+
+.account-statements .statement-info h2 {
+    font-size: 32px;
+    color: #004080;
+}
+
+.account-statements .statement-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.account-statements .statements-table {
+    margin-top: 40px;
+    overflow-x: auto; /* Allows horizontal scroll on smaller screens */
+}
+
+.account-statements .statements-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.account-statements .statements-table th,
+.account-statements .statements-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.account-statements .statements-table th {
+    background-color: #004080;
+    color: white;
+}
+
+.account-statements .view-more-btn {
+    display: inline-block;
+    background-color: #004080;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.account-statements .view-more-btn:hover {
+    background-color: #003366;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #004080;
+    color: white;
+    padding: 10px;
+}
+
+/* Responsive Design */
+
+/* Mobile Phones (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    header nav ul li {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .account-statements {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .account-statements .statement-info h2 {
+        font-size: 24px;
+    }
+
+    .account-statements .statement-info p {
+        font-size: 16px;
+    }
+
+    .account-statements .statements-table th,
+    .account-statements .statements-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .account-statements .view-more-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .account-statements {
+        width: 95%;
+    }
+
+    .account-statements .statement-info h2 {
+        font-size: 28px;
+    }
+
+    .account-statements .statement-info p {
+        font-size: 17px;
+    }
+}

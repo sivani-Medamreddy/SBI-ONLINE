@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Make sure you link to your CSS file -->
+</head>
+<body>
+
+    <!-- Top Header -->
+    <header>
+        <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2024/08/state-bank-of-india-lending-rates-1723718862.jpg" width="50" height="50">
+        <div class="brand">BankSecure</div>
+        <nav>
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                
+                <li><a href="support.html">Support</a></li>
+                <li><a href="SecurityTips.html">SecurityTips</a></li>
+                <li><a href="helpcenter.html">Help Center</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <!-- Terms and Conditions Section -->
+    <section class="terms-content">
+        <h2>Terms and Conditions</h2>
+        <div id="terms-text"></div>
+        <button class="apply-now-btn" onclick="applyNow()">Apply Now</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 BankSecure. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to get the URL parameter for the plan
+        function getURLParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Function to display terms based on the 'plan' parameter in the URL
+        function displayTerms() {
+            const plan = getURLParameter('plan');  // Get the 'plan' parameter from the URL
+            let termsText = '';
+
+            // Check the value of the 'plan' parameter and display the appropriate terms
+            if (plan === 'life-insurance') {
+                termsText = `
+                    <h3>Life Insurance Plan</h3>
+                    <ul>
+                        <li>Eligibility: Available for individuals aged 18-60 years.</li>
+                        <li>Policy Term: 5 years, 10 years, 20 years.</li>
+                        <li>Sum Assured: Minimum ₹5,00,000.</li>
+                        <li>Premium Payment Frequency: Monthly, Quarterly, Annually.</li>
+                        <li>Exclusions: Suicide, pre-existing diseases, and certain high-risk occupations.</li>
+                    </ul>
+                `;
+            } else if (plan === 'health-insurance') {
+                termsText = `
+                    <h3>Health Insurance Plan</h3>
+                    <ul>
+                        <li>Eligibility: Individuals aged 18-65 years.</li>
+                        <li>Coverage: Hospitalization, pre/post-hospitalization, day-care procedures.</li>
+                        <li>Policy Term: 1 year.</li>
+                        <li>Sum Insured: ₹1,00,000 to ₹50,00,000.</li>
+                        <li>Exclusions: Cosmetic surgery, maternity, and certain chronic conditions.</li>
+                    </ul>
+                `;
+            } else if (plan === 'auto-insurance') {
+                termsText = `
+                    <h3>Auto Insurance Plan</h3>
+                    <ul>
+                        <li>Eligibility: Available for vehicles up to 10 years old.</li>
+                        <li>Coverage: Third-party liability, collision damage, theft, fire, and natural calamities.</li>
+                        <li>Policy Term: 1 year, renewable.</li>
+                        <li>Sum Insured: Based on the market value of the vehicle.</li>
+                        <li>Exclusions: Driving under the influence of alcohol or drugs, mechanical breakdowns.</li>
+                    </ul>
+                `;
+            } else {
+                termsText = '<p>Sorry, no terms and conditions found for this plan.</p>';
+            }
+
+            // Insert the correct terms content into the page
+            document.getElementById('terms-text').innerHTML = termsText;
+        }
+
+        // Function to handle the "Apply Now" button click
+        function applyNow() {
+            alert("Your request has been sent");
+            window.location.href = "index1.html"; // Redirect to the homepage after applying
+        }
+
+        // Call the function to display terms when the page loads
+        displayTerms();
+    </script>
+
+</body>
+</html>

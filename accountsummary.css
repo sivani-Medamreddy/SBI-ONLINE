@@ -1,0 +1,236 @@
+/* Account Summary Page Styling */
+
+/* Body and Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header (from index1.html) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004080;
+    padding: 15px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Account Summary Section */
+.account-summary {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.account-summary h2 {
+    color: #004080;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.account-info p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Actions Section */
+.actions h3 {
+    font-size: 24px;
+    color: #004080;
+    margin-top: 30px;
+}
+
+.actions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.actions li {
+    margin: 15px 0;
+}
+
+.action-btn {
+    display: inline-block;
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #003366;
+}
+
+/* Recent Transactions Table */
+.recent-transactions {
+    margin-top: 40px;
+}
+
+.recent-transactions h3 {
+    font-size: 24px;
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.view-all-btn {
+    display: inline-block;
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background-color: #003366;
+}
+
+/* Footer (from index1.html) */
+footer {
+    text-align: center;
+    background-color: #004080;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+
+/* Mobile Phones (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .account-summary {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .account-summary h2 {
+        font-size: 24px;
+    }
+
+    .account-info p {
+        font-size: 16px;
+    }
+
+    .actions h3 {
+        font-size: 20px;
+    }
+
+    .action-btn {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+
+    .recent-transactions h3 {
+        font-size: 20px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .view-all-btn {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .account-summary {
+        width: 95%;
+    }
+
+    .account-summary h2 {
+        font-size: 28px;
+    }
+
+    .account-info p {
+        font-size: 17px;
+    }
+
+    .recent-transactions h3 {
+        font-size: 22px;
+    }
+}

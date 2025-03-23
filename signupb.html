@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankSecure - Sign Up</title>
+    <link rel="stylesheet" href="stylels.css">
+    
+    <script>
+        function redirectToLoginPage(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get password values
+            var password = document.getElementById("businessPassword").value;
+            var confirmPassword = document.getElementById("businessConfirmPassword").value;
+
+            // Validate password match
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            alert("Successfully signed up! Redirecting to login page.");
+            window.location.href = "loginp.html"; // Redirect to login page
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2024/08/state-bank-of-india-lending-rates-1723718862.jpg" width="50" height="50">
+        <div class="brand">BankSecure</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">SecurityTips</a></li>
+                <li><a href="#">Help Center</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Business Banking Sign Up -->
+    <section class="signup-container">
+        <div class="business-banking">
+            <h2>Business Banking Sign Up</h2>
+            <form action="#" method="POST" onsubmit="redirectToLoginPage(event)">
+                <input type="text" id="businessUsername" name="username" placeholder="Username" required>
+                <input type="email" id="businessEmail" name="email" placeholder="Email Address" required>
+                <input type="password" id="businessPassword" name="password" placeholder="Password" required>
+                <input type="password" id="businessConfirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+            <div class="actions">
+                <a href="loginp.html">Already have an account? Login</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BankSecure. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

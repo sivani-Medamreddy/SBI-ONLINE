@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚨 Report Lost Card - BankSecure</title>
+    <link rel="stylesheet" href="blocklostcard.css">
+    <script>
+        function showSuccessMessage(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Show the success modal
+            document.getElementById('successModal').style.display = 'block';
+
+            // Redirect after 3 seconds
+            setTimeout(function() {
+                window.location.href = 'newcard.html'; // Redirect to new card application page
+            }, 3000); // 3 seconds delay for modal display
+        }
+
+        function closeModal() {
+            // Close the modal
+            document.getElementById('successModal').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1 style="background: darkred; padding: 15px; color: white; text-align: center;">🚨 Report Lost Card - BankSecure</h1>
+    </header>
+
+    <section class="lost-card-container">
+        <h2 style="color: red; text-align: center;">Your card has been lost. Please block it immediately.</h2>
+        <p style="text-align: center; font-size: 1.2em;">Fill out the form below to block your card.</p>
+
+        <form id="block-lost-card-form" onsubmit="showSuccessMessage(event)">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required placeholder="Enter your lost card number">
+
+            <button type="submit" style="background-color: red; color: white; font-weight: bold;">Submit Report</button>
+        </form>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h3>Your card has been successfully blocked!</h3>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p style="color: white; text-align: center; background: black; padding: 10px;">&copy; 2025 BankSecure. Stay Alert, Stay Safe.</p>
+    </footer>
+
+</body>
+</html>

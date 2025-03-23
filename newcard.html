@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💳 Apply for New Card - BankSecure</title>
+    <link rel="stylesheet" href="newcard.css">
+    <script>
+        function showSuccessMessage(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Show the success modal
+            document.getElementById('successModal').style.display = 'block';
+
+            // Redirect after 3 seconds
+            setTimeout(function() {
+                window.location.href = 'index1.html'; // Redirect to home page (index1.html)
+            }, 3000); // 3 seconds delay for modal display
+        }
+
+        function closeModal() {
+            // Close the modal
+            document.getElementById('successModal').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1 style="background: green; padding: 15px; color: white; text-align: center;">💳 Apply for New Card - BankSecure</h1>
+    </header>
+
+    <section class="new-card-container">
+        <h2 style="color: green; text-align: center;">You have successfully blocked your card.</h2>
+        <p style="text-align: center; font-size: 1.2em;">Please fill out the form below to apply for a new card.</p>
+
+        <form id="new-card-form" onsubmit="showSuccessMessage(event)">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required placeholder="Enter your address"></textarea>
+
+            <button type="submit" style="background-color: green; color: white; font-weight: bold;">Submit Application</button>
+        </form>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h3>Your card will be sent to your address!</h3>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <p style="color: white; text-align: center; background: black; padding: 10px;">&copy; 2025 BankSecure. Stay Alert, Stay Safe.</p>
+    </footer>
+
+</body>
+</html>

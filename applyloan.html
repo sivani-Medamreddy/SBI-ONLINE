@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Loan Application - BankSecure</title>
+    <link rel="stylesheet" href="loanservices.css">
+    <script>
+        function showConfirmation() {
+            // Show a pop-up message
+            alert("Your request has been sent!");
+
+            // Redirect to index1.html after 2 seconds (2000 milliseconds)
+            setTimeout(function() {
+                window.location.href = "index1.html";
+            }, 2000);
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Top Header -->
+    <header>
+        <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2024/08/state-bank-of-india-lending-rates-1723718862.jpg" width="50" height="50" alt="SBI Logo">
+        <div class="brand">BankSecure</div>
+        <nav>
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="loanservices.html">Loan Services</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Security Tips</a></li>
+                <li><a href="#">Help Center</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Loan Details Section -->
+    <section class="loan-details">
+        <h2>Loan Application Process</h2>
+        <p>Explore the details of our Home Loan service and start your application today.</p>
+
+        <h3>Interest Rate</h3>
+        <p>Our Loan interest rate starts at 7.5% per annum. The rate may vary depending on your eligibility and loan amount.</p>
+
+        <h3>Eligibility Criteria</h3>
+        <ul>
+            <li>Minimum age: 21 years</li>
+            <li>Maximum age: 65 years at the time of loan maturity</li>
+            <li>Stable income and employment history</li>
+        </ul>
+
+        <h3>Required Documents</h3>
+        <ul>
+            <li>Proof of identity (Aadhaar Card, Passport, etc.)</li>
+            <li>Proof of address (Utility bills, Bank statement, etc.)</li>
+            <li>Proof of income (Salary slips, ITR, etc.)</li>
+            <li>Property documents (Sale deed, etc.)</li>
+        </ul>
+
+        <h3>How to Apply</h3>
+        <p>You can apply for a Home Loan by filling out the online form or visiting our nearest branch. For detailed assistance, feel free to contact us.</p>
+
+        <!-- Updated "Start Application" button with JavaScript trigger -->
+        <a href="javascript:void(0);" class="loan-btn" onclick="showConfirmation()">Start Application</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BankSecure. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

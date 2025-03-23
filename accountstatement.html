@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Statements | BankSecure</title>
+    <link rel="stylesheet" href="accountstatement.css">
+    <script>
+        function logout() {
+            alert("Successfully logged out");
+            window.location.href = "index1.html"; // Redirect to homepage
+        }
+    </script>
+    
+</head>
+<body>
+
+    <!-- Header (from index1.html) -->
+    <header>
+        <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2024/08/state-bank-of-india-lending-rates-1723718862.jpg" width="50" height="50" alt="Bank Logo">
+        <div class="brand">BankSecure</div>
+        <nav>
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="accountsummary.html">Account Summary</a></li>
+                
+                <li><a href="#" onclick="logout()">Logout</a></li>
+
+            </ul>
+        </nav>
+        
+    </header>
+
+    <!-- Account Statements Section -->
+    <section class="account-statements">
+        <div class="statement-info">
+            <h2>Account Statements</h2>
+            <p>Account Number: ********1234</p>
+            <p>Account Type: Checking</p>
+            <p>Balance: $10,250.75</p>
+        </div>
+
+        <div class="statements-table">
+            <h3>Transaction History</h3>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Transaction Description</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>2025-03-15</td>
+                    <td>Deposit from Employer</td>
+                    <td>$5,000.00</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>2025-03-12</td>
+                    <td>Grocery Store Purchase</td>
+                    <td>-$150.25</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>2025-03-10</td>
+                    <td>Transfer to Savings Account</td>
+                    <td>-$2,000.00</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>2025-03-09</td>
+                    <td>Restaurant Dining</td>
+                    <td>-$75.50</td>
+                    <td>Completed</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </table>
+        </div>
+
+        <div class="view-more">
+            <a href="profile.html" class="view-more-btn">view profile</a>
+        </div>
+    </section>
+
+    <!-- Footer (from index1.html) -->
+    <footer>
+        <p>&copy; 2025 BankSecure. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

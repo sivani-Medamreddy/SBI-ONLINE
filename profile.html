@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | BankSecure</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2024/08/state-bank-of-india-lending-rates-1723718862.jpg" width="50" height="50" alt="Bank Logo">
+        <div class="brand">BankSecure</div>
+        <nav>
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="account-summary.html">Account Summary</a></li>
+                <li><a href="transactions.html">Transactions</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+        <button class="lang-switch" aria-label="Switch Language">Switch Language</button>
+    </header>
+
+    <!-- Profile Section -->
+    
+    <!-- Profile Section -->
+<section class="profile-section">
+    <h2>Welcome, <span id="username">John Doe</span></h2>
+
+    <div class="profile-details">
+        <h3>Your Information</h3>
+        <p><strong>Full Name:</strong> <span id="fullName">John Doe</span></p>
+        <p><strong>Account Number:</strong> <span id="accountNumber">********1234</span></p>
+        <p><strong>Account Type:</strong> <span id="accountType">Checking</span></p>
+        <p><strong>Email:</strong> <span id="email">johndoe@email.com</span></p>
+        <p><strong>Phone Number:</strong> <span id="phoneNumber">(123) 456-7890</span></p>
+    </div>
+
+    <div class="profile-actions">
+        <a href="index1.html" class="action-btn">Home</a>
+        <!-- Updated link to redirect to account-summary.html -->
+        <a href="accountsummary.html" class="action-btn">View Transactions</a>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BankSecure. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Example: If you want to dynamically fill the user data from the sessionStorage or localStorage.
+        // You can set the values like this (assuming you stored them during login).
+        // sessionStorage.setItem("username", "John Doe");
+        // sessionStorage.setItem("email", "johndoe@email.com");
+
+        document.getElementById("username").textContent = sessionStorage.getItem("username") || "John Doe";
+        document.getElementById("fullName").textContent = sessionStorage.getItem("fullName") || "John Doe";
+        document.getElementById("accountNumber").textContent = sessionStorage.getItem("accountNumber") || "********1234";
+        document.getElementById("accountType").textContent = sessionStorage.getItem("accountType") || "Checking";
+        document.getElementById("email").textContent = sessionStorage.getItem("email") || "johndoe@email.com";
+        document.getElementById("phoneNumber").textContent = sessionStorage.getItem("phoneNumber") || "(123) 456-7890";
+    </script>
+
+</body>
+</html>

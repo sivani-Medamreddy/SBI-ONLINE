@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankSecure - Login & Sign Up</title>
+    <link rel="stylesheet" href="stylels.css">
+    
+    <script>
+        function redirectToHomePage(event) {
+            event.preventDefault(); // Prevent form submission
+            alert("Successfully logged in!"); // Show success message
+            window.location.href = "accountsummary.html"; // Redirect to account-summary.html
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2024/08/state-bank-of-india-lending-rates-1723718862.jpg" width="50" height="50">
+        <div class="brand">BankSecure</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">SecurityTips</a></li>
+                <li><a href="#">Help Center</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Business Banking Login -->
+    <section class="login-container">
+        <div class="business-banking">
+            <h2>Business Banking Login</h2>
+            <form action="#" method="POST" onsubmit="redirectToHomePage(event)">
+                <input type="text" id="businessUsername" name="username" placeholder="Username" required>
+                <input type="password" id="businessPassword" name="password" placeholder="Password" required>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <div class="actions">
+                <a href="#">New Business? Sign Up</a>
+                <a href="#">Forgot Password</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BankSecure. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

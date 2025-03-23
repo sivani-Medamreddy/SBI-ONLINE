@@ -1,0 +1,211 @@
+/* Help Center Page Styling */
+
+/* Body and Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header (from index1.html) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004080;
+    padding: 15px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Help Center Section */
+.help-center {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.help-center h2 {
+    font-size: 30px;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.help-center p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* FAQ Accordion */
+.accordion {
+    text-align: left;
+}
+
+.accordion-item {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+.accordion-button {
+    background-color: #004080;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.accordion-button:hover {
+    background-color: #003366;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Feedback Form */
+.feedback-section {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.feedback-section h3 {
+    font-size: 24px;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.feedback-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feedback-section label {
+    font-size: 18px;
+    color: #333;
+}
+
+.feedback-section input, .feedback-section textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.feedback-section textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #004080;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.submit-btn:hover {
+    background-color: #003366;
+}
+
+/* Live Chat Button */
+.live-chat-btn {
+    margin-top: 40px;
+}
+
+.live-chat-btn button {
+    background-color: #004080;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.live-chat-btn button:hover {
+    background-color: #003366;
+}
+
+/* Footer (from index1.html) */
+footer {
+    text-align: center;
+    background-color: #004080;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .help-center {
+        padding: 30px 20px;
+    }
+
+    .feedback-section {
+        padding: 20px;
+    }
+
+    .feedback-section h3 {
+        font-size: 20px;
+    }
+
+    .feedback-section label {
+        font-size: 16px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .live-chat-btn button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}

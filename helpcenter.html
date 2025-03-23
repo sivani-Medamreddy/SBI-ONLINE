@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center | BankSecure</title>
+    <link rel="stylesheet" href="helpcenter.css">
+</head>
+<body>
+
+    <!-- Header (from index1.html) -->
+    <header>
+        <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2024/08/state-bank-of-india-lending-rates-1723718862.jpg" width="50" height="50">
+        <div class="brand">BankSecure</div>
+        <nav>
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="#help-center">Help Center</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="SecurityTips.html">SecurityTips</a></li>
+                
+            </ul>
+        </nav>
+        
+    </header>
+
+    <!-- Help Center Section -->
+    <section id="help-center" class="help-center">
+        <h2>Welcome to the Help Center</h2>
+        <p>If you have any questions, you're in the right place. Here you can find answers to the most common questions, or feel free to ask your own!</p>
+        
+        <!-- FAQ Accordion -->
+        <div class="faq">
+            <h3>Frequently Asked Questions</h3>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-button">How can I reset my password?</button>
+                    <div class="accordion-content">
+                        <p>To reset your password, click on the "Forgot Password" link on the login page and follow the instructions sent to your email.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">How can I block a lost card?</button>
+                    <div class="accordion-content">
+                        <p>You can block your card immediately by calling customer service or by visiting the "Block Lost Card" page.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">How to report fraud?</button>
+                    <div class="accordion-content">
+                        <p>To report fraud, please visit the "Report Fraud" page or contact customer support directly for assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Section: Encourage users to ask doubts -->
+        <div class="feedback-section">
+            <h3>Got a Question? Ask Us!</h3>
+            <form id="questionForm" action="#" method="post" onsubmit="submitQuestion(event)">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="question">Your Question:</label>
+                <textarea id="question" name="question" rows="5" placeholder="Type your question here..." required></textarea>
+
+                <button type="submit" class="submit-btn">Submit Question</button>
+            </form>
+            <div id="confirmationMessage" style="display:none; color: green; margin-top: 20px;">
+                Your question has been sent. Thank you!
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer (from index1.html) -->
+    <footer>
+        <p>&copy; 2025 BankSecure. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        // Function to handle form submission
+        function submitQuestion(event) {
+            event.preventDefault();  // Prevent form from submitting normally
+
+            // Show confirmation message
+            document.getElementById("confirmationMessage").style.display = "block";
+
+            // Optionally, reset the form fields
+            document.getElementById("questionForm").reset();
+        }
+    </script>
+
+</body>
+</html>

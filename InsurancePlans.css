@@ -1,0 +1,191 @@
+/* Reset and Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004080;
+    padding: 15px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Insurance Plans Section */
+.insurance-plans {
+    padding: 40px;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.carousel-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.carousel-item:hover {
+    transform: scale(1.05);
+}
+
+.terms-btn {
+    background: #004080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.terms-btn:hover {
+    background: #003366;
+}
+
+/* Modal Styling for Terms & Conditions */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-btn {
+    font-size: 30px;
+    color: #004080;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-btn:hover {
+    color: #003366;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #004080;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 768px (Tablets and smaller devices) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .modal-content {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .terms-btn {
+        padding: 8px 15px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+/* For screens smaller than 480px (Mobile Phones) */
+@media (max-width: 480px) {
+    .brand {
+        font-size: 18px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .carousel-item {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .terms-btn {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
